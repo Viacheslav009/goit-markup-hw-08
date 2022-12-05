@@ -8,6 +8,7 @@
   --hero-footer-background: #2f303a;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
+  --indent: 30px;
 }
 
 .portfolio__cards:hover > .portfolio__box > .overlay {
@@ -352,8 +353,9 @@ ul {
 
 /* убираем отступы у картинок снизу */
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* убираем точки в списке */
@@ -769,10 +771,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 30px;
 }
 .peculiarities__items {
@@ -783,14 +781,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (min-width: 1200px) {
-  .peculiarities {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 30px;
-  }
-}
 @media screen and (min-width: 480px) {
   .peculiarities {
     display: inline-block;
@@ -798,6 +788,8 @@ a {
   }
 }
 .peculiarities__box {
+  width: 270px;
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -832,8 +824,17 @@ a {
 }
 
 .team {
-  display: none;
-  gap: 30px;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .team {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    --items: 4;
+  }
 }
 
 .section__heading {
@@ -1013,6 +1014,12 @@ a {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .desktop {
+    display: none;
+  }
+}
+
 .footer {
   background-color: var(--hero-footer-background);
   padding-top: 60px;
@@ -1171,13 +1178,17 @@ a {
 }
 
 .portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-  margin: 0px;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    --items: 3;
+  }
 }
 
 .portfolio__box {
@@ -1373,4 +1384,18 @@ a {
 .mobile-socials-item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 15px;
+}
+
+.card-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set__item {
+  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / (var(--items)));
+      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / (var(--items)));
 }/*# sourceMappingURL=main.css.map */

@@ -1,31 +1,11 @@
 .peculiarities {
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-
-  &__items{ align-items: center;
-    justify-content: center;
-
-  }
-  
-
-    @media screen and (min-width:1200px) {
-      display: flex;
-      gap: 30px;
-   }
-
-
-   @media screen and (min-width:480px) {
-    display: inline-block;
-    margin-bottom: 30px;
-    
- }
+    display: flex;
+    gap: 30px; 
+    /* padding-top: 94px; */
   
   &__box{
-    // width: 270px;
-    // height: 120px;
+    width: 270px;
+    height: 120px;
     
   
     background-color: #f5f4fa;
@@ -35,8 +15,6 @@
     gap: 30px;
     align-items: center;
     justify-content: center;
-
-    padding: 25px 192px;
   }
   &__title{
     font-weight: 700;
@@ -47,8 +25,6 @@
     margin-bottom: 10px;
   
     color: var(--primary-text-color);
-
-    text-align: center;
   }
   
   &__subtitle{

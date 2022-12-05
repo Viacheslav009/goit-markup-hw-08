@@ -6,12 +6,24 @@
     margin-bottom: 50px;
     margin-top: 0px;
   }
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 0px;
+  // .portfolio {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   gap: 30px;
+  //   margin: 0px;
     
+  // }
+
+  .portfolio {
+    --items: 1;
+  
+    @media screen and (min-width: 768px) {
+      --items: 2;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      --items: 3;
+    }
   }
   
   .portfolio__box {

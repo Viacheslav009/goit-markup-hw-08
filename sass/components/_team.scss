@@ -1,9 +1,20 @@
-.team{
-    display: none;
-    // display: flex;
-    gap: 30px; 
-  }
+// .team{
+//     display: none;
+//    display: flex;
+//     gap: 30px; 
+//   }
+
+  .team {
+    --items: 1;
   
+    @media screen and (min-width: 768px) {
+      --items: 2;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      --items: 4;
+    }
+  }
   .section__heading{
     font-weight: 700;
     font-size: 36px;

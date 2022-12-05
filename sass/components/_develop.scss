@@ -1,11 +1,11 @@
-.develop{
-  @media screen and (min-width:1200px) {
+.develop {
+//   @media screen and (min-width:1200px) {
+//     display: flex;
+//  }
+
+
+    
     display: flex;
- }
-
-
-    display: none;
-    // display: flex;
     gap: 30px; 
   
   &__work {
@@ -34,3 +34,8 @@
     padding-bottom: 94px;
   }
   
+  .desktop{
+    @media screen and (max-width:1199px) {
+      display:none;
+   }
+  }
